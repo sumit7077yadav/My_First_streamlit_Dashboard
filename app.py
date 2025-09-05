@@ -90,32 +90,32 @@ if df is not None:
             )
             st.plotly_chart(fig_line, use_container_width=True)
 
-    with col4:
+    # with col4:
         
-         st.write("### Pie Chart of Units Sold by Category")
-    categorical_cols = ['Category', 'Product ID',"Region"]
+    #      st.write("### Pie Chart of Units Sold by Category")
+    # categorical_cols = ['Category', 'Product ID',"Region"]
     
-    if categorical_cols:
-        category_choice = st.selectbox(
-            "Select a Category for the Pie Chart",
-            categorical_cols,
-            key="pie_chart"
-        )
+    # if categorical_cols:
+    #     category_choice = st.selectbox(
+    #         "Select a Category for the Pie Chart",
+    #         categorical_cols,
+    #         key="pie_chart"
+    #     )
         
         
-        units_sold_by_category = df.groupby(category_choice)['Units Sold'].sum().reset_index()
+    #     units_sold_by_category = df.groupby(category_choice)['Units Sold'].sum().reset_index()
         
-        fig_pie = px.pie(
+    #     fig_pie = px.pie(
         
-            units_sold_by_category,
-            names=category_choice,
-            values='Units Sold',
-            title=f"Total Units Sold by {category_choice}",
-            color_discrete_sequence=px.colors.qualitative.Plotly,
-            height=400,  # You can adjust this value
-            width=500
-        )
-        st.plotly_chart(fig_pie, use_container_width=True)
+    #         units_sold_by_category,
+    #         names=category_choice,
+    #         values='Units Sold',
+    #         title=f"Total Units Sold by {category_choice}",
+    #         color_discrete_sequence=px.colors.qualitative.Plotly,
+    #         height=400,  # You can adjust this value
+    #         width=500
+    #     )
+    #     st.plotly_chart(fig_pie, use_container_width=True)
 
        
 
