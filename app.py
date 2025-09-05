@@ -110,18 +110,18 @@ else:
 
    
 
-with col3:
-    st.subheader('Units Sold Distribution by Region')
+# with col3:
+#     st.subheader('Units Sold Distribution by Region')
 
 
-    sales_distribution = filtered_df.groupby('Region')['Units Sold'].sum().reset_index()
+#     sales_distribution = filtered_df.groupby('Region')['Units Sold'].sum().reset_index()
 
-    fig = px.pie(
-        sales_distribution,
-        names='Region',
-        values='Units Sold',
-        title='Percentage of Units Sold by Region',
-    )
-    st.plotly_chart(fig, use_container_width=True)
+#     fig = px.pie(
+#         sales_distribution,
+#         names='Region',
+#         values='Units Sold',
+#         title='Percentage of Units Sold by Region',
+#     )
+#     st.plotly_chart(fig, use_container_width=True)
 # else:
 #     st.warning("No data to display for the pie chart. Please adjust your filters.")
