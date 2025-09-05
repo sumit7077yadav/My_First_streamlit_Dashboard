@@ -1,4 +1,4 @@
-# https://myfirstappdashboard.streamlit.app/
+# URL ==== https://myfirstappdashboard.streamlit.app/
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -90,8 +90,8 @@ else:
             x='Category',
             y='Units Sold',
             title='Total Units Sold by Category',
-            labels={'Units Sold': 'Total Units Sold', 'Category': 'Product Category'},
-            color='Category'
+            labels={'Units Sold': 'Total Units Sold',},
+            # color='Category'
         )
         st.plotly_chart(fig_bar, use_container_width=True)
     
