@@ -16,7 +16,7 @@ def load_data(file_path):
         st.error(f"Error: The file '{file_path}' was not found.")
         return None
 
-file_path = "C:/Users/EX0065/Downloads/streamlit/sales_data.csv"
+file_path = "sales_data.csv"
 
 
 df = load_data(file_path)
